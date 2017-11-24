@@ -6,6 +6,7 @@ function saveBookmark(e){
 	// Get form values
 	var siteName = document.getElementById('siteName').value;
 	var siteUrl = document.getElementById('siteUrl').value;
+	var imageUrl = document.getElementById('imageUrl').value;
 
 	if(!validateForm(siteName, siteUrl)){
 		return false;
@@ -14,7 +15,8 @@ function saveBookmark(e){
 
 	var bookmark = {
 		name: siteName,
-		url: siteUrl
+		url: siteUrl,
+		image: imageUrl
 	}
 
 
@@ -84,13 +86,15 @@ function fetchBookmarks(){
 	for(var i = 0; i < bookmarks.length; i++){
 		var name = bookmarks[i].name;
 		var url = bookmarks[i].url;
+		var image = bookmarks[i].image;
 
-		bookmarksResults.innerHTML += '<div class="well">'+
-									  '<h3>'+name+
-									  ' <a class="btn btn-primary" target="_blank" href="'+url+'">Visit</a> ' +
-									  ' <a onclick="deleteBookmark(\''+url+'\')" class="btn btn-danger" href="#">Delete</a> ' +
+		bookmarksResults.innerHTML += '<div class="well siteBookmark">'+
+										'<img class="siteThumbnail" src="'+image+'">'+
+									  '<h3 class="thumbnailName">'+name+
+									  ' <a class="btn btn-primary thumbnailBtn" target="_blank" href="'+url+'">Visit</a> ' +
+									  ' <a onclick="deleteBookmark(\''+url+'\')" class="btn btn-danger thumbnailBtn" href="#">Delete</a> ' +
 									  '</h3>'+
-									  '</div>';
+								  '</div>';
 	}
 }
 

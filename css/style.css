@@ -80,3 +80,25 @@ body {
     border-bottom: 0;
   }
 }
+
+/* Site Thumbnail */
+.siteThumbnail{
+  width: 100px;
+  height: 80px;
+  float: left;
+}
+
+.siteBookmark{
+  padding: 3px 150px 150px 150px;
+  display: inline;
+}
+.thumbnailName{
+  text-align: left;
+  padding: 20px 0 0 0px;
+  margin: 0 0 0 120px;
+}
+
+.thumbnailBtn{
+  float: right;
+  margin: 5px 5px 5px 5px;
+}
