@@ -8,4 +8,4 @@ Version
 
 Usage
 
-Just download and open index.html. It is all client side
+Just download and open index.html. It is all client side.
